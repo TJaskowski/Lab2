@@ -13,7 +13,7 @@ namespace LibApp.Data.Migrations
             migrationBuilder.Sql("UPDATE MembershipTypes SET Name = 'Quaterly' WHERE Id = 3");
             migrationBuilder.Sql("UPDATE MembershipTypes SET Name = 'Annual' WHERE Id = 4");
 
-            // migrationBuilder.Sql("INSERT INTO Genres (Id, Name) VALUES (2, 'Thriller')");
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

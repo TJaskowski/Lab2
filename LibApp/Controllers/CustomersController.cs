@@ -52,16 +52,16 @@ namespace LibApp.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Save(Customer customer)
         {
-            if (!ModelState.IsValid)
-            {
-                var viewModel = new NewCustomerViewModel
-                {
-                    Customer = customer,
-                    MembershipTypes = _context.MembershipTypes.ToList()
-                };
+            //if (!ModelState.IsValid)
+            //{
+            //    var viewModel = new NewCustomerViewModel
+            //    {
+            //        Customer = customer,
+            //        MembershipTypes = _context.MembershipTypes.ToList()
+            //    };
 
-                return View("New", viewModel);
-            }
+            //    return View("New", viewModel);
+            //}
 
             if (customer.Id == 0)
             { 
@@ -95,7 +95,7 @@ namespace LibApp.Controllers
                 MembershipTypes = _context.MembershipTypes.ToList()
             };
 
-            return View("New", viewModel);
+            return View("Edit",viewModel);
         }
 
         private ApplicationDbContext _context;
